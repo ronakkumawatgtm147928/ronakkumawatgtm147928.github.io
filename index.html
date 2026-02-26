@@ -2,68 +2,88 @@
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Drive | The Golden Era</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Royal Drive | Live Luxury Portal</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="main-wrapper">
-    <div class="ornament-top"></div>
-
-    <nav class="royal-nav">
+<div class="master-container">
+    <nav class="main-nav">
         <div class="nav-links">
             <a href="#">HOME</a>
             <a href="#">COLLECTION</a>
-            <a href="#">HISTORY</a>
+            <a href="#">LIVE STOCK</a>
         </div>
-        <div class="logo-box">
-            <h1>ROYAL DRIVE</h1>
-            <span>ESTD 1926</span>
-        </div>
-        <div class="nav-right">
-            <button id="theme-toggle">🌓 SWITCH MODE</button>
-        </div>
+        <button id="theme-toggle" class="mode-switcher">🌓 LIGHT/DARK</button>
     </nav>
 
-    <section class="grand-collection">
-        <h2 class="section-divider"><span>WORLD'S SAFEST CARS</span></h2>
-        <div class="car-container">
-            <div class="car-item" onclick="openDetails('Volvo XC90', 'Safe as a vault. Features include Pilot Assist, 360 Camera, and Emergency Braking.', '₹1.1 Cr', 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341')">
-                <div class="img-frame">
-                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500" alt="Volvo">
-                </div>
-                <h3>Volvo XC90</h3>
-                <p>Safety: 5 Star ★ | ₹1.1 Cr</p>
-            </div>
-            <div class="car-item" onclick="openDetails('Mercedes S-Class Guard', 'Bulletproof and blast-proof. Used by world leaders for ultimate safety.', '₹12 Cr', 'https://images.unsplash.com/photo-1606611013016-969c19ba27bb')">
-                <div class="img-frame">
-                    <img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500" alt="Mercedes">
-                </div>
-                <h3>Mercedes Guard</h3>
-                <p>Safety: VR10 Certified | ₹12 Cr</p>
-            </div>
-        </div>
+    <header class="hero-section">
+        <div class="royal-badge">ESTD 1926</div>
+        <h1 class="glitter-text">ROYAL DRIVE</h1>
+        <div class="ornament">⚜ —————— ⚜ —————— ⚜</div>
+        <p class="live-status"><span class="dot"></span> LIVE: 247 Premium Cars Available</p>
+    </header>
 
-        <h2 class="section-divider"><span>SPEED & PRICE KINGS</span></h2>
-        <div class="car-container">
-            <div class="car-item" onclick="openDetails('Bugatti Chiron', 'The pinnacle of speed. 1500 Horsepower with a top speed of 490 km/h.', '₹21 Cr', 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e')">
-                <div class="img-frame"><img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=500"></div>
-                <h3>Bugatti Chiron</h3>
-                <p>Speed: 490km/h | ₹21 Cr</p>
+    <section class="category-block">
+        <h2 class="cat-header">WORLD'S SAFEST CARS (PART 1)</h2>
+        <div class="car-grid">
+            <div class="car-card" onclick="openDetails('Volvo XC90', 'High-strength boron steel cage.', '₹1.1 Cr', 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341', '2.0L Turbo', '300 hp', '420 Nm', 'https://www.volvocars.com')">
+                <div class="frame"><img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500"></div>
+                <h3>Volvo XC90</h3>
+                <p>Safety: 5-Star</p>
+            </div>
+            <div class="car-card" onclick="openDetails('Tesla Model S', 'Lowest probability of injury.', '₹1.5 Cr', 'https://images.unsplash.com/photo-1560958089-b8a1929cea89', 'Electric Dual Motor', '670 hp', 'Over 1000 Nm', 'https://www.tesla.com')">
+                <div class="frame"><img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500"></div>
+                <h3>Tesla Model S</h3>
+                <p>Safety: Highest Rating</p>
             </div>
         </div>
     </section>
 
-    <div id="carModal" class="modal">
+    <section class="category-block">
+        <h2 class="cat-header">WORLD'S SAFEST CARS (PART 2)</h2>
+        <div class="car-grid">
+            <div class="car-card" onclick="openDetails('Mercedes S-Class', 'Active blind spot assist.', '₹1.8 Cr', 'https://images.unsplash.com/photo-1606611013016-969c19ba27bb', '3.0L Inline-6', '362 hp', '500 Nm', 'https://www.mercedes-benz.com')">
+                <div class="frame"><img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500"></div>
+                <h3>Mercedes S-Class</h3>
+                <p>Safety: Elite Guard</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2 class="cat-header">PREMIUM COLLECTION (10L - 1CR)</h2>
+        <div class="car-grid">
+            <div class="car-card" onclick="openDetails('BMW 5 Series', 'Executive luxury sedan.', '₹85 Lakh', 'https://images.unsplash.com/photo-1555215695-3004980ad54e', '2.0L TwinPower', '248 hp', '350 Nm', 'https://www.bmw.com')">
+                <div class="frame"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500"></div>
+                <h3>BMW 5 Series</h3>
+                <p>₹85 Lakh</p>
+            </div>
+            <div class="car-card" onclick="openDetails('Audi A6', 'Progressive design & tech.', '₹70 Lakh', 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d', '2.0L TFSI', '241 hp', '370 Nm', 'https://www.audi.com')">
+                <div class="frame"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=500"></div>
+                <h3>Audi A6</h3>
+                <p>₹70 Lakh</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="detailModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImg" src="" alt="Car Image">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="">
             <h2 id="modalTitle"></h2>
-            <p id="modalPrice" class="gold-text"></p>
+            <div id="modalPrice" class="gold-tag"></div>
+            
+            <table class="specs-table">
+                <tr><td>Engine</td><td id="mEngine"></td></tr>
+                <tr><td>Power</td><td id="mPower"></td></tr>
+                <tr><td>Torque</td><td id="mTorque"></td></tr>
+            </table>
+            
             <p id="modalDesc"></p>
-            <button class="inquiry-btn">Enquire Now</button>
+            <a id="liveLink" href="#" target="_blank" class="live-btn">VISIT OFFICIAL WEBSITE</a>
         </div>
     </div>
 </div>
@@ -71,37 +91,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-<div id="carModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img id="modalImg" src="" alt="Car Image">
-        <h2 id="modalTitle"></h2>
-        <p id="modalPrice" class="gold-text"></p>
-        
-        <table class="spec-table">
-            <tr>
-                <td><i class="icon">⚙</i> Engine</td>
-                <td id="specEngine">-</td>
-            </tr>
-            <tr>
-                <td><i class="icon">⚡</i> Power</td>
-                <td id="specPower">-</td>
-            </tr>
-            <tr>
-                <td><i class="icon">🏎</i> Torque</td>
-                <td id="specTorque">-</td>
-            </tr>
-        </table>
-
-        <p id="modalDesc"></p>
-        <button class="inquiry-btn">REQUEST A QUOTE</button>
-    </div>
-</div>
-
-<div class="car-item" onclick="openDetails('Rolls-Royce Ghost', 'The definition of silence and luxury.', '₹7.5 Cr', 'https://images.unsplash.com/photo-1631214503951-375126d8546e', '6.75L V12', '563 bhp', '850 Nm')">
-    <div class="img-frame">
-        <img src="https://images.unsplash.com/photo-1631214503951-375126d8546e?w=500">
-    </div>
-    <h3>Rolls-Royce Ghost</h3>
-    <p>Price: ₹7.5 Cr</p>
-</div>

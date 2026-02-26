@@ -123,3 +123,51 @@ body {
     cursor: pointer;
     font-family: 'Cinzel';
 }
+/* Specs Table Styling */
+.spec-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-family: 'Cinzel', serif;
+    background: rgba(197, 160, 89, 0.05); /* Very light gold tint */
+}
+
+.spec-table td {
+    padding: 12px;
+    border: 1px solid var(--gold);
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.spec-table td:first-child {
+    font-weight: bold;
+    color: var(--gold);
+    width: 40%;
+}
+
+.icon {
+    margin-right: 10px;
+    font-style: normal;
+}
+
+/* Luxury Inquiry Button */
+.inquiry-btn {
+    background: var(--gold);
+    color: var(--bg);
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.inquiry-btn:hover {
+    background: white;
+    color: #000;
+    box-shadow: 0 0 15px var(--gold);
+}
+

@@ -71,3 +71,37 @@
 <script src="script.js"></script>
 </body>
 </html>
+<div id="carModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg" src="" alt="Car Image">
+        <h2 id="modalTitle"></h2>
+        <p id="modalPrice" class="gold-text"></p>
+        
+        <table class="spec-table">
+            <tr>
+                <td><i class="icon">⚙</i> Engine</td>
+                <td id="specEngine">-</td>
+            </tr>
+            <tr>
+                <td><i class="icon">⚡</i> Power</td>
+                <td id="specPower">-</td>
+            </tr>
+            <tr>
+                <td><i class="icon">🏎</i> Torque</td>
+                <td id="specTorque">-</td>
+            </tr>
+        </table>
+
+        <p id="modalDesc"></p>
+        <button class="inquiry-btn">REQUEST A QUOTE</button>
+    </div>
+</div>
+
+<div class="car-item" onclick="openDetails('Rolls-Royce Ghost', 'The definition of silence and luxury.', '₹7.5 Cr', 'https://images.unsplash.com/photo-1631214503951-375126d8546e', '6.75L V12', '563 bhp', '850 Nm')">
+    <div class="img-frame">
+        <img src="https://images.unsplash.com/photo-1631214503951-375126d8546e?w=500">
+    </div>
+    <h3>Rolls-Royce Ghost</h3>
+    <p>Price: ₹7.5 Cr</p>
+</div>

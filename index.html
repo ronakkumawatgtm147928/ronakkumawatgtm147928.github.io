@@ -3,78 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Drive | Elite Classics</title>
+    <title>Royal Drive | The Golden Era</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="royal-container">
-        <header>
-            <nav class="top-nav">
-                <button id="theme-toggle">🌓 SWITCH MODE</button>
-                <div class="nav-links">
-                    <a href="#">COLLECTION</a>
-                    <a href="#">HISTORY</a>
-                    <a href="#">CONTACT</a>
-                </div>
-            </nav>
-            <div class="logo-area">
-                <h1 class="main-title">ROYAL DRIVE</h1>
-                <div class="decorative-line"><span>⚜</span></div>
-                <p class="subtitle">World's Most Expensive & Safest Heritage</p>
-            </div>
-        </header>
+<div class="main-wrapper">
+    <div class="ornament-top"></div>
 
-        <section class="car-category">
-            <h2 class="cat-title">WORLD'S FASTEST & LUXURY</h2>
-            <div class="luxury-grid">
-                <div class="car-card">
-                    <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=400" alt="Bugatti">
-                    <h3>Bugatti Chiron</h3>
-                    <p class="stat">Speed: 490 km/h | Price: ₹21 Cr</p>
-                </div>
-                <div class="car-card">
-                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=400" alt="Rolls">
-                    <h3>Boat Tail</h3>
-                    <p class="stat">Luxury: Ultra | Price: ₹200 Cr</p>
-                </div>
-            </div>
-        </section>
+    <nav class="royal-nav">
+        <div class="nav-links">
+            <a href="#">HOME</a>
+            <a href="#">COLLECTION</a>
+            <a href="#">HISTORY</a>
+        </div>
+        <div class="logo-box">
+            <h1>ROYAL DRIVE</h1>
+            <span>ESTD 1926</span>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle">🌓 SWITCH MODE</button>
+        </div>
+    </nav>
 
-        <section class="car-category">
-            <h2 class="cat-title">WORLD'S SAFEST CARS</h2>
-            <div class="luxury-grid">
-                <div class="car-card">
-                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=400" alt="Volvo">
-                    <h3>Volvo XC90</h3>
-                    <p class="stat">Safety Rating: 5 Star ★</p>
+    <section class="grand-collection">
+        <h2 class="section-divider"><span>WORLD'S SAFEST CARS</span></h2>
+        <div class="car-container">
+            <div class="car-item" onclick="openDetails('Volvo XC90', 'Safe as a vault. Features include Pilot Assist, 360 Camera, and Emergency Braking.', '₹1.1 Cr', 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341')">
+                <div class="img-frame">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500" alt="Volvo">
                 </div>
-                <div class="car-card">
-                    <img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?auto=format&fit=crop&w=400" alt="Mercedes">
-                    <h3>Mercedes S-Class</h3>
-                    <p class="stat">Guard VR10 Certified</p>
-                </div>
+                <h3>Volvo XC90</h3>
+                <p>Safety: 5 Star ★ | ₹1.1 Cr</p>
             </div>
-        </section>
+            <div class="car-item" onclick="openDetails('Mercedes S-Class Guard', 'Bulletproof and blast-proof. Used by world leaders for ultimate safety.', '₹12 Cr', 'https://images.unsplash.com/photo-1606611013016-969c19ba27bb')">
+                <div class="img-frame">
+                    <img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500" alt="Mercedes">
+                </div>
+                <h3>Mercedes Guard</h3>
+                <p>Safety: VR10 Certified | ₹12 Cr</p>
+            </div>
+        </div>
 
-        <section class="car-category">
-            <h2 class="cat-title">ELITE SELECTION (10L - 1CR)</h2>
-            <div class="luxury-grid">
-                <div class="car-card">
-                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=400" alt="BMW">
-                    <h3>BMW 5 Series</h3>
-                    <p class="stat">Price: ₹75 Lakh</p>
-                </div>
-                <div class="car-card">
-                    <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=400" alt="Audi">
-                    <h3>Audi A6</h3>
-                    <p class="stat">Price: ₹68 Lakh</p>
-                </div>
+        <h2 class="section-divider"><span>SPEED & PRICE KINGS</span></h2>
+        <div class="car-container">
+            <div class="car-item" onclick="openDetails('Bugatti Chiron', 'The pinnacle of speed. 1500 Horsepower with a top speed of 490 km/h.', '₹21 Cr', 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e')">
+                <div class="img-frame"><img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=500"></div>
+                <h3>Bugatti Chiron</h3>
+                <p>Speed: 490km/h | ₹21 Cr</p>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" alt="Car Image">
+            <h2 id="modalTitle"></h2>
+            <p id="modalPrice" class="gold-text"></p>
+            <p id="modalDesc"></p>
+            <button class="inquiry-btn">Enquire Now</button>
+        </div>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

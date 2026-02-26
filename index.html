@@ -3,79 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Drive | Curated Classic Luxury</title>
+    <title>Royal Drive | The Imperial 3D Collection</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="master-frame">
-    <nav class="royal-nav">
-        <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#">COLLECTION</a></li>
-            <li><a href="#">BESPOKE</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-        <div class="mode-control">
-            <button id="theme-toggle">☀️ DARK MODE</button>
+<div class="glass-master-container">
+    <nav class="floating-nav">
+        <div class="nav-links">
+            <a href="#" class="active">HOME</a>
+            <a href="#">COLLECTION</a>
+            <a href="#">BESPOKE</a>
+            <a href="#">HISTORY</a>
         </div>
+        <button id="theme-toggle" class="shiny-btn">🌓 MODE</button>
     </nav>
 
-    <header class="logo-section">
-        <h1 class="main-logo">ROYAL DRIVE</h1>
-        <p class="subtitle">Curated Classic Luxury Automobiles</p>
+    <header class="royal-header">
+        <div class="badge">ESTD 1926</div>
+        <h1 class="glow-text">ROYAL DRIVE</h1>
+        <p class="tagline">The Imperial Automotive Heritage</p>
+        <div class="royal-divider">⚜ ——————— 🙛 ⚜ 🙙 ——————— ⚜</div>
     </header>
 
-    <div class="ornament-divider">⚜</div>
-    
-    <section class="car-showcase">
-        <div class="car-item" onclick="showInfo('Rolls-Royce Phantom V', 'The pinnacle of luxury coachwork.', '₹7.5 Cr', 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c')">
-            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=400" alt="Rolls Royce">
-            <h3>Rolls-Royce Phantom V - $750,000</h3>
-        </div>
-        <div class="car-item" onclick="showInfo('Duesenberg Model J', 'The legendary American classic.', '₹12 Cr', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70')">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400" alt="Duesenberg">
-            <h3>Duesenberg J - $1,200,000</h3>
-        </div>
-        <div class="car-item" onclick="showInfo('Bentley Continental', 'Grace, Space, and Pace.', '₹6.5 Cr', 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b')">
-            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400" alt="Bentley">
-            <h3>Bentley Continental - $600,000</h3>
-        </div>
-    </section>
+    <main class="content-area">
+        
+        <h2 class="section-title"><span>WORLD'S SAFEST CARS (PART I)</span></h2>
+        <section class="car-grid">
+            <div class="elevated-card" onclick="openSpecs('Volvo XC90', 'High-strength boron steel cage.', '₹1.1 Cr', 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341', '2.0L Turbo', '300 HP', '420 Nm', 'https://www.volvocars.com')">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500"></div>
+                <h3>Volvo XC90</h3>
+                <p class="gold-text">Safety: 5-Star Elite</p>
+            </div>
+            <div class="elevated-card" onclick="openSpecs('Tesla Model S', 'Advanced Autopilot & Safety.', '₹1.5 Cr', 'https://images.unsplash.com/photo-1560958089-b8a1929cea89', 'Electric Dual', '670 HP', '1000 Nm', 'https://www.tesla.com')">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500"></div>
+                <h3>Tesla Model S</h3>
+                <p class="gold-text">Safety: AI Protected</p>
+            </div>
+        </section>
 
-    <section class="info-grid">
-        <div class="info-box">
-            <h4>THE COLLECTION</h4>
-            <div class="box-img"><img src="https://images.unsplash.com/photo-1562141989-c5c79ac8f576?w=400"></div>
-        </div>
-        <div class="info-box">
-            <h4>BESPOKE COACHBUILD</h4>
-            <div class="box-img"><img src="https://images.unsplash.com/photo-1527247043589-98e6ac08f56c?w=400"></div>
-        </div>
-        <div class="info-box">
-            <h4>OUR LEGACY</h4>
-            <div class="box-img"><img src="https://images.unsplash.com/photo-1517153295259-74ed0d41589d?w=400"></div>
-        </div>
-    </section>
+        <h2 class="section-title"><span>WORLD'S SAFEST CARS (PART II)</span></h2>
+        <section class="car-grid">
+            <div class="elevated-card" onclick="openSpecs('Mercedes S-Class Guard', 'Bulletproof & Blast-proof.', '₹12 Cr', 'https://images.unsplash.com/photo-1606611013016-969c19ba27bb', '6.0L V12', '530 HP', '830 Nm', 'https://www.mercedes-benz.com')">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500"></div>
+                <h3>Mercedes S-Guard</h3>
+                <p class="gold-text">Safety: VR10 Certified</p>
+            </div>
+        </section>
+
+        <h2 class="section-title"><span>ELITE MIX (10L - 1CR)</span></h2>
+        <section class="car-grid">
+            <div class="elevated-card" onclick="openSpecs('BMW 5 Series', 'German Engineering at its best.', '₹75 Lakh', 'https://images.unsplash.com/photo-1555215695-3004980ad54e', '2.0L TwinPower', '252 HP', '350 Nm', 'https://www.bmw.in')">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500"></div>
+                <h3>BMW 5 Series</h3>
+                <p class="gold-text">₹75 Lakh</p>
+            </div>
+            <div class="elevated-card" onclick="openSpecs('Audi A6', 'The Progressive Executive.', '₹68 Lakh', 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d', '2.0L TFSI', '241 HP', '370 Nm', 'https://www.audi.in')">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=500"></div>
+                <h3>Audi A6</h3>
+                <p class="gold-text">₹68 Lakh</p>
+            </div>
+        </section>
+    </main>
 
     <footer class="royal-footer">
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SHOWROOM LOCATION</h3>
+                <p>⚜ Royal Drive Imperial</p>
+                <p>12th Floor, Apex Tower,</p>
+                <p>JLN Marg, Malviya Nagar,</p>
+                <p>Jaipur, Rajasthan - 302017</p>
+            </div>
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">About Legacy</a></li>
+                    <li><a href="#">Bespoke Coachbuild</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>CONNECT</h3>
+                <p>Phone: +91 141 400 9000</p>
+                <p>Email: info@royaldrive.com</p>
+                <div class="social-icons">
+                    <span>𝕏</span> <span>In</span> <span>Ig</span>
+                </div>
+            </div>
         </div>
-        <p>© 2026 ROYAL DRIVE. Follow Us</p>
+        <div class="footer-bottom">
+            <p>© 2026 ROYAL DRIVE | Designed for the Jaipur Elite</p>
+        </div>
     </footer>
 </div>
 
-<div id="infoModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
+<div id="specsModal" class="modal">
+    <div class="modal-content glass-effect">
+        <span class="close-btn" onclick="closeSpecs()">&times;</span>
         <img id="modalImg" src="">
         <h2 id="modalTitle"></h2>
-        <p id="modalPrice" class="gold-text"></p>
+        <table class="specs-table">
+            <tr><td>Engine</td><td id="mEngine">-</td></tr>
+            <tr><td>Power</td><td id="mPower">-</td></tr>
+            <tr><td>Torque</td><td id="mTorque">-</td></tr>
+        </table>
         <p id="modalDesc"></p>
-        <button class="enquiry-btn">ENQUIRE FOR PRICE</button>
+        <a id="modalLiveLink" href="#" target="_blank" class="live-btn">VISIT OFFICIAL WEBSITE</a>
     </div>
 </div>
 

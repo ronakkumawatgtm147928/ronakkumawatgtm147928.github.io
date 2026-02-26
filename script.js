@@ -26,3 +26,22 @@ window.onclick = (event) => {
         closeModal();
     }
 };
+function openDetails(title, desc, price, img, engine, power, torque) {
+    // Basic Info
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDesc').innerText = desc;
+    document.getElementById('modalPrice').innerText = price;
+    document.getElementById('modalImg').src = img + "?w=800";
+    
+    // Specifications Table Data
+    document.getElementById('specEngine').innerText = engine;
+    document.getElementById('specPower').innerText = power;
+    document.getElementById('specTorque').innerText = torque;
+    
+    // Show Modal
+    document.getElementById('carModal').style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById('carModal').style.display = "none";
+}

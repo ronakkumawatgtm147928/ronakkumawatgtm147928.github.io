@@ -2,89 +2,84 @@
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Royal Drive | Live Luxury Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Drive | The Imperial Collection</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="master-container">
-    <nav class="main-nav">
-        <div class="nav-links">
-            <a href="#">HOME</a>
-            <a href="#">COLLECTION</a>
-            <a href="#">LIVE STOCK</a>
-        </div>
-        <button id="theme-toggle" class="mode-switcher">🌓 LIGHT/DARK</button>
-    </nav>
-
-    <header class="hero-section">
-        <div class="royal-badge">ESTD 1926</div>
-        <h1 class="glitter-text">ROYAL DRIVE</h1>
-        <div class="ornament">⚜ —————— ⚜ —————— ⚜</div>
-        <p class="live-status"><span class="dot"></span> LIVE: 247 Premium Cars Available</p>
-    </header>
-
-    <section class="category-block">
-        <h2 class="cat-header">WORLD'S SAFEST CARS (PART 1)</h2>
-        <div class="car-grid">
-            <div class="car-card" onclick="openDetails('Volvo XC90', 'High-strength boron steel cage.', '₹1.1 Cr', 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341', '2.0L Turbo', '300 hp', '420 Nm', 'https://www.volvocars.com')">
-                <div class="frame"><img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500"></div>
-                <h3>Volvo XC90</h3>
-                <p>Safety: 5-Star</p>
+<div class="royal-outer-border">
+    <div class="royal-inner-container">
+        
+        <nav class="top-bar">
+            <div class="nav-links">
+                <a href="#">HOME</a>
+                <a href="#">COLLECTION</a>
+                <a href="#">LIVE FEED</a>
             </div>
-            <div class="car-card" onclick="openDetails('Tesla Model S', 'Lowest probability of injury.', '₹1.5 Cr', 'https://images.unsplash.com/photo-1560958089-b8a1929cea89', 'Electric Dual Motor', '670 hp', 'Over 1000 Nm', 'https://www.tesla.com')">
-                <div class="frame"><img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500"></div>
-                <h3>Tesla Model S</h3>
-                <p>Safety: Highest Rating</p>
-            </div>
-        </div>
-    </section>
+            <button id="theme-toggle" class="luxury-btn">🌓 SWITCH MODE</button>
+        </nav>
 
-    <section class="category-block">
-        <h2 class="cat-header">WORLD'S SAFEST CARS (PART 2)</h2>
-        <div class="car-grid">
-            <div class="car-card" onclick="openDetails('Mercedes S-Class', 'Active blind spot assist.', '₹1.8 Cr', 'https://images.unsplash.com/photo-1606611013016-969c19ba27bb', '3.0L Inline-6', '362 hp', '500 Nm', 'https://www.mercedes-benz.com')">
-                <div class="frame"><img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500"></div>
-                <h3>Mercedes S-Class</h3>
-                <p>Safety: Elite Guard</p>
-            </div>
-        </div>
-    </section>
+        <header class="main-header">
+            <div class="badge">ESTD 1926</div>
+            <h1 class="logo-title">ROYAL DRIVE</h1>
+            <div class="ornament">⚜ ——————— 🙛 ⚜ 🙙 ——————— ⚜</div>
+            <p class="tagline">World's Most Expensive & Safest Heritage</p>
+        </header>
 
-    <section class="category-block">
-        <h2 class="cat-header">PREMIUM COLLECTION (10L - 1CR)</h2>
-        <div class="car-grid">
-            <div class="car-card" onclick="openDetails('BMW 5 Series', 'Executive luxury sedan.', '₹85 Lakh', 'https://images.unsplash.com/photo-1555215695-3004980ad54e', '2.0L TwinPower', '248 hp', '350 Nm', 'https://www.bmw.com')">
-                <div class="frame"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500"></div>
-                <h3>BMW 5 Series</h3>
-                <p>₹85 Lakh</p>
-            </div>
-            <div class="car-card" onclick="openDetails('Audi A6', 'Progressive design & tech.', '₹70 Lakh', 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d', '2.0L TFSI', '241 hp', '370 Nm', 'https://www.audi.com')">
-                <div class="frame"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=500"></div>
-                <h3>Audi A6</h3>
-                <p>₹70 Lakh</p>
-            </div>
-        </div>
-    </section>
+        <main class="content-area">
 
-    <div id="detailModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <img id="modalImg" src="">
-            <h2 id="modalTitle"></h2>
-            <div id="modalPrice" class="gold-tag"></div>
-            
+            <section class="car-category">
+                <h2 class="section-title"><span>WORLD'S SAFEST CARS (PART I)</span></h2>
+                <div class="car-grid">
+                    <div class="car-card" onclick="openSpecs('Volvo XC90', 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341', '₹1.1 Cr', '2.0L Turbo', '300 HP', '420 Nm', 'https://www.volvocars.com')">
+                        <div class="img-frame"><img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500"></div>
+                        <h3>Volvo XC90</h3>
+                        <p class="gold-text">Price: ₹1.1 Cr</p>
+                    </div>
+                    </div>
+            </section>
+
+            <section class="car-category">
+                <h2 class="section-title"><span>WORLD'S SAFEST CARS (PART II)</span></h2>
+                <div class="car-grid">
+                    <div class="car-card" onclick="openSpecs('Mercedes S-Class', 'https://images.unsplash.com/photo-1606611013016-969c19ba27bb', '₹1.8 Cr', '3.0L V6', '362 HP', '500 Nm', 'https://www.mercedes-benz.com')">
+                        <div class="img-frame"><img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500"></div>
+                        <h3>Mercedes S-Guard</h3>
+                        <p class="gold-text">Price: ₹12 Cr onwards</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="car-category">
+                <h2 class="section-title"><span>PREMIUM MIX (10L - 1CR)</span></h2>
+                <div class="car-grid">
+                    <div class="car-card" onclick="openSpecs('BMW 5 Series', 'https://images.unsplash.com/photo-1555215695-3004980ad54e', '₹75 Lakh', '2.0L TwinPower', '252 HP', '350 Nm', 'https://www.bmw.in')">
+                        <div class="img-frame"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500"></div>
+                        <h3>BMW 5 Series</h3>
+                        <p class="gold-text">Price: ₹75 Lakh</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<div id="specsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeSpecs()">&times;</span>
+        <img id="modalImg" src="">
+        <h2 id="modalTitle"></h2>
+        <div class="specs-box">
             <table class="specs-table">
-                <tr><td>Engine</td><td id="mEngine"></td></tr>
-                <tr><td>Power</td><td id="mPower"></td></tr>
-                <tr><td>Torque</td><td id="mTorque"></td></tr>
+                <tr><td>Engine</td><td id="mEngine">-</td></tr>
+                <tr><td>Power</td><td id="mPower">-</td></tr>
+                <tr><td>Torque</td><td id="mTorque">-</td></tr>
             </table>
-            
-            <p id="modalDesc"></p>
-            <a id="liveLink" href="#" target="_blank" class="live-btn">VISIT OFFICIAL WEBSITE</a>
         </div>
+        <a id="modalLiveLink" href="#" target="_blank" class="live-btn">VISIT OFFICIAL WEBSITE</a>
     </div>
 </div>
 

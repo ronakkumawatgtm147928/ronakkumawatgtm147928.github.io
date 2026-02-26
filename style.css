@@ -1,17 +1,15 @@
 :root {
-    --bg-color: #0d1117; /* Deep Charcoal (Dark) */
+    --bg-color: #111d2b; /* Deep Classic Blue (Not pure black) */
     --gold: #c5a059;
     --text-color: #f0e6d2;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --border-gold: 3px double #c5a059;
+    --card-bg: rgba(255, 255, 255, 0.05);
 }
 
 [data-theme="light"] {
-    --bg-color: #fdfaf5; /* Ivory/Cream (Light) */
-    --text-color: #1a1a1a;
+    --bg-color: #fdfaf5; /* Ivory/Cream */
     --gold: #8b6e23;
-    --card-bg: #ffffff;
-    --border-gold: 3px double #8b6e23;
+    --text-color: #1a1a1a;
+    --card-bg: #fff;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,99 +18,78 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Playfair Display', serif;
-    transition: 0.5s ease;
-    overflow-x: hidden;
-}
-
-/* Royal Double Border Container */
-.royal-outer-border {
-    border: var(--border-gold);
-    margin: 10px;
-    padding: 10px;
-}
-
-.royal-inner-container {
-    border: 1px solid var(--gold);
-    min-height: 96vh;
     padding: 20px;
+    transition: 0.5s;
+}
+
+/* Ornamental Border */
+.master-frame {
+    border: 3px double var(--gold);
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px;
     position: relative;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
 }
 
-/* Header & Logo */
-.main-header { text-align: center; padding: 40px 0; }
-.logo-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2rem, 8vw, 4.5rem); /* Responsive Font */
-    color: var(--gold);
-    letter-spacing: 5px;
-    line-height: 1.2;
-}
-
-/* Anti-Overlap Fix for Category Titles */
-.section-title {
-    text-align: center;
-    border-bottom: 1px solid var(--gold);
-    line-height: 0.1em;
-    margin: 60px 0 30px;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1rem, 4vw, 1.8rem);
-}
-
-.section-title span {
-    background: var(--bg-color);
-    padding: 0 15px;
-    color: var(--gold);
-}
-
-/* Grid System */
-.car-grid {
+/* Nav Fix - Mobile Responsive */
+.royal-nav {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 15px;
+}
+
+.nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: bold; font-size: 13px; letter-spacing: 2px; }
+
+/* Main Heading */
+.logo-section { text-align: center; margin: 50px 0; }
+.main-logo { font-family: 'Cinzel', serif; font-size: clamp(2rem, 10vw, 4rem); color: var(--gold); letter-spacing: 10px; }
+.subtitle { font-style: italic; color: var(--gold); }
+
+.ornament-divider { text-align: center; font-size: 30px; color: var(--gold); margin-bottom: 30px; }
+
+/* Car Showcase Row */
+.car-showcase {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 30px;
+    margin-bottom: 60px;
 }
 
-.car-card {
-    width: 320px;
-    background: var(--card-bg);
-    border: 1px solid var(--gold);
-    padding: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.car-item { width: 300px; text-align: center; cursor: pointer; transition: 0.3s; }
+.car-item img { width: 100%; border-radius: 5px; margin-bottom: 15px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); }
+.car-item h3 { font-size: 14px; font-weight: normal; color: var(--text-color); }
+.car-item:hover img { transform: translateY(-5px); border: 1px solid var(--gold); }
+
+/* Bottom Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    border-top: 1px solid var(--gold);
+    padding-top: 50px;
 }
 
-.car-card:hover { transform: scale(1.02); box-shadow: 0 0 20px var(--gold); }
+.info-box { border: 1px solid var(--gold); padding: 15px; text-align: center; background: var(--card-bg); }
+.info-box h4 { font-family: 'Cinzel'; margin-bottom: 15px; color: var(--gold); letter-spacing: 3px; }
+.box-img img { width: 100%; height: 150px; object-fit: cover; border: 1px solid var(--gold); }
 
-.img-frame { border: 1px solid var(--gold); padding: 5px; margin-bottom: 15px; }
-.img-frame img { width: 100%; height: 200px; object-fit: cover; }
+/* Modal */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
+.modal-content { background: var(--bg-color); border: 2px solid var(--gold); margin: 5% auto; padding: 25px; width: 90%; max-width: 600px; text-align: center; }
+.modal-content img { width: 100%; border: 1px solid var(--gold); margin-bottom: 20px; }
+.gold-text { color: var(--gold); font-size: 24px; font-weight: bold; }
+.close-btn { float: right; font-size: 40px; color: var(--gold); cursor: pointer; }
 
-/* Modal & Table Styles */
-.modal { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
-.modal-content {
-    background: var(--bg-color);
-    border: 2px solid var(--gold);
-    margin: 5% auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-}
+/* Theme Button Styling */
+#theme-toggle { background: var(--gold); color: white; border: none; padding: 8px 15px; cursor: pointer; font-family: 'Cinzel'; font-size: 11px; }
 
-.specs-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-.specs-table td { border: 1px solid var(--gold); padding: 10px; color: var(--text-color); }
-
-.live-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: var(--gold);
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Responsive Fixes */
-@media (max-width: 600px) {
-    .royal-outer-border { margin: 5px; padding: 5px; }
-    .logo-title { letter-spacing: 2px; }
+/* Desktop Site Full View */
+@media (min-width: 1024px) {
+    .master-frame { padding: 60px; }
 }
